@@ -5,7 +5,10 @@ find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
 
 set(msg_files
-  "msg/HadMapBin.msg")
+  "msg/HadMapBin.msg"
+  "msg/HadMapPrimitive.msg"
+  "msg/HadMapSegment.msg"
+  "srv/HadMapService.srv")
 
 set(msg_dependencies
   std_msgs)

@@ -1,0 +1,26 @@
+# Service where you can request a rectangular prismic section of the
+# Highly Automated Driving (HAD) map and receive the data in binary form.
+
+# Request Constants
+uint8 FULL_MAP = 0
+uint8 ALL_PRIMITIVES = 1
+uint8 DRIVEABLE_GEOMETRY = 2
+uint8 REGULATORY_ELEMENTS = 3
+uint8 STATIC_OBJECTS = 4
+
+# Service_Request
+uint8[] requested_primitives
+
+# Geometric upper bound of map data requested
+geometry_msgs/Point point_upper_bound
+
+# Geometric lower bound of map data requested
+geometry_msgs/Point point_lower_bound
+
+---
+
+# Service Response
+autoware_mapping_msgs/HadMapBin map
+
+# TODO(mfc): Find out what this is for
+int32 response
