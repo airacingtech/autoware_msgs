@@ -11,6 +11,7 @@ set(msg_files
   "srv/HadMapService.srv")
 
 set(msg_dependencies
+  geometry_msgs
   std_msgs)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
